@@ -1,0 +1,95 @@
+<!-- Overlay de navegación (sibling del header, NO dentro, para evitar que
+     backdrop-filter cree un containing block que limite position:fixed) -->
+<nav class="nav" id="nav" [class.is-open]="isMenuOpen" aria-label="Navegación principal">
+
+  <!-- Cabecera del overlay (sólo móvil): logo + botón cerrar -->
+  <div class="nav__header">
+    <a href="#inicio" class="logo logo--light" (click)="closeMenu()" aria-label="DevDyD — Inicio">
+      <span class="logo__mark" aria-hidden="true">
+        <i data-lucide="code-2"></i>
+      </span>
+      Dev<span class="logo__accent">DyD</span>
+    </a>
+    <button class="nav__close" (click)="closeMenu()" aria-label="Cerrar menú">
+      <i data-lucide="x"></i>
+    </button>
+  </div>
+
+  <ul class="nav__list">
+    <li><a href="#inicio"    class="nav__link" [class.is-active]="isActive('inicio')"    (click)="closeMenu()">{{ 'nav.inicio'    | translate }}</a></li>
+    <li><a href="#servicios" class="nav__link" [class.is-active]="isActive('servicios')" (click)="closeMenu()">{{ 'nav.servicios' | translate }}</a></li>
+    <li><a href="#nosotros"  class="nav__link" [class.is-active]="isActive('nosotros')"  (click)="closeMenu()">{{ 'nav.nosotros'  | translate }}</a></li>
+    <li><a href="#contacto"  class="nav__link" [class.is-active]="isActive('contacto')"  (click)="closeMenu()">{{ 'nav.contacto'  | translate }}</a></li>
+  </ul>
+
+  <a href="#contacto" class="btn btn--primary nav__cta" (click)="closeMenu()">{{ 'nav.cta' | translate }}</a>
+
+  <!-- Pie del overlay (sólo móvil): contacto rápido -->
+  <div class="nav__footer">
+    <a href="mailto:info@devdyd.com">info&#64;devdyd.com</a>
+    <span aria-hidden="true">·</span>
+    <a href="tel:+34722204479">+34 722 20 44 79</a>
+  </div>
+
+</nav>
+
+<header class="header" id="header" [class.is-scrolled]="isScrolled">
+  <div class="container header__inner">
+
+    <a href="#inicio" class="logo" aria-label="DevDyD — Inicio">
+      <span class="logo__mark" aria-hidden="true">
+        <i data-lucide="code-2"></i>
+      </span>
+      Dev<span class="logo__accent">DyD</span>
+    </a>
+
+    <!-- En escritorio: nav aquí como flex row. En móvil: nav está arriba como overlay. -->
+    <nav class="nav nav--desktop" aria-label="Navegación principal">
+      <ul class="nav__list">
+        <li><a href="#inicio"    class="nav__link" [class.is-active]="isActive('inicio')"    >{{ 'nav.inicio'    | translate }}</a></li>
+        <li><a href="#servicios" class="nav__link" [class.is-active]="isActive('servicios')" >{{ 'nav.servicios' | translate }}</a></li>
+        <li><a href="#nosotros"  class="nav__link" [class.is-active]="isActive('nosotros')"  >{{ 'nav.nosotros'  | translate }}</a></li>
+        <li><a href="#contacto"  class="nav__link" [class.is-active]="isActive('contacto')"  >{{ 'nav.contacto'  | translate }}</a></li>
+      </ul>
+      <a href="#contacto" class="btn btn--primary nav__cta">{{ 'nav.cta' | translate }}</a>
+    </nav>
+
+    <!-- Selector de idioma -->
+    <div class="lang-dropdown">
+      <button class="lang-trigger" (click)="toggleLangDropdown()" [class.lang-trigger--open]="isLangOpen">
+        <img [src]="activeLang.flag" [alt]="activeLang.label" class="lang-flag-img lang-flag-img--sm" />
+        <span class="lang-code">{{ activeLang.code.toUpperCase() }}</span>
+        <i data-lucide="chevron-down" class="lang-chevron"></i>
+      </button>
+
+      <div class="lang-menu" [class.lang-menu--open]="isLangOpen">
+        @for (lang of langs; track lang.code) {
+          <button
+            class="lang-option"
+            [class.lang-option--active]="currentLang === lang.code"
+            (click)="setLang(lang.code)">
+            <img [src]="lang.flag" [alt]="lang.label" class="lang-flag-img" />
+            <span class="lang-option__info">
+              <span class="lang-option__name">{{ lang.label }}</span>
+              <span class="lang-option__code">{{ lang.code.toUpperCase() }}</span>
+            </span>
+            @if (currentLang === lang.code) {
+              <i data-lucide="check" class="lang-check"></i>
+            }
+          </button>
+        }
+      </div>
+    </div>
+
+    <button
+      class="nav-toggle"
+      id="nav-toggle"
+      [attr.aria-expanded]="isMenuOpen"
+      [attr.aria-label]="isMenuOpen ? 'Cerrar menú' : 'Abrir menú'"
+      aria-controls="nav"
+      (click)="toggleMenu()">
+      <i data-lucide="menu"></i>
+    </button>
+
+  </div>
+</header>

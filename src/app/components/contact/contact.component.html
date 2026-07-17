@@ -1,0 +1,86 @@
+<section class="section section--alt" id="contacto">
+  <div class="container">
+    <div class="section__head fade-in">
+      <span class="section__tag">{{ 'contact.tag' | translate }}</span>
+      <h2 class="section__title">{{ 'contact.title' | translate }}</h2>
+      <p class="section__lead">{{ 'contact.lead' | translate }}</p>
+    </div>
+
+    <div class="contact fade-in">
+
+      <form class="contact__form" [formGroup]="form" (ngSubmit)="onSubmit()" novalidate>
+
+        <div class="form-group" [class.has-error]="hasError('nombre')">
+          <label for="nombre">{{ 'contact.nombre_label' | translate }}</label>
+          <input type="text" id="nombre" formControlName="nombre"
+            [placeholder]="'contact.nombre_ph' | translate" autocomplete="name" />
+          @if (hasError('nombre')) {
+            <span class="form-error">{{ 'contact.err_nombre' | translate }}</span>
+          }
+        </div>
+
+        <div class="form-group" [class.has-error]="hasError('email')">
+          <label for="email">{{ 'contact.email_label' | translate }}</label>
+          <input type="email" id="email" formControlName="email"
+            [placeholder]="'contact.email_ph' | translate" autocomplete="email" />
+          @if (hasError('email')) {
+            <span class="form-error">{{ 'contact.err_email' | translate }}</span>
+          }
+        </div>
+
+        <div class="form-group" [class.has-error]="hasError('mensaje')">
+          <label for="mensaje">{{ 'contact.msg_label' | translate }}</label>
+          <textarea id="mensaje" formControlName="mensaje" rows="4"
+            [placeholder]="'contact.msg_ph' | translate"></textarea>
+          @if (hasError('mensaje')) {
+            <span class="form-error">{{ 'contact.err_msg' | translate }}</span>
+          }
+        </div>
+
+        <button type="submit" class="btn btn--whatsapp btn--lg btn--block">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+            <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.548 4.118 1.508 5.855L0 24l6.335-1.652A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.79 9.79 0 01-5.002-1.374l-.359-.214-3.722.975.994-3.623-.235-.372A9.818 9.818 0 012.182 12C2.182 6.579 6.579 2.182 12 2.182S21.818 6.579 21.818 12 17.421 21.818 12 21.818z"/>
+          </svg>
+          {{ 'contact.submit' | translate }}
+        </button>
+
+      </form>
+
+      <aside class="contact__info">
+        <h3>{{ 'contact.info_title' | translate }}</h3>
+        <ul>
+          <li>
+            <i data-lucide="mail"></i>
+            <div>
+              <span>{{ 'contact.lbl_email' | translate }}</span>
+              <a href="mailto:info@devdyd.com">info&#64;devdyd.com</a>
+            </div>
+          </li>
+          <li>
+            <i data-lucide="phone"></i>
+            <div>
+              <span>{{ 'contact.lbl_phone' | translate }}</span>
+              <a href="tel:+34722204479">+34 722 20 44 79</a>
+            </div>
+          </li>
+          <li>
+            <i data-lucide="map-pin"></i>
+            <div>
+              <span>{{ 'contact.lbl_location' | translate }}</span>
+              <p>{{ 'contact.location' | translate }}</p>
+            </div>
+          </li>
+          <li>
+            <i data-lucide="clock"></i>
+            <div>
+              <span>{{ 'contact.lbl_hours' | translate }}</span>
+              <p>{{ 'contact.hours' | translate }}</p>
+            </div>
+          </li>
+        </ul>
+      </aside>
+
+    </div>
+  </div>
+</section>

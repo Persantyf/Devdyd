@@ -1,0 +1,51 @@
+<section class="hero" id="inicio">
+  <div class="hero__bg" aria-hidden="true"></div>
+
+  <div class="container hero__inner">
+    <div class="hero__content fade-in">
+      <span class="hero__badge">
+        <i data-lucide="sparkles"></i>
+        {{ 'hero.badge' | translate }}
+      </span>
+
+      <h1 class="hero__title" [innerHTML]="'hero.title' | translate"></h1>
+
+      <p class="hero__subtitle">{{ 'hero.subtitle' | translate }}</p>
+
+      <div class="hero__actions">
+        <a href="#contacto" class="btn btn--primary btn--lg">
+          {{ 'hero.cta_primary' | translate }}
+          <i data-lucide="arrow-right"></i>
+        </a>
+        <a href="#servicios" class="btn btn--ghost btn--lg">{{ 'hero.cta_secondary' | translate }}</a>
+      </div>
+
+      <ul class="hero__stats" aria-label="Datos de confianza">
+        <li><strong>+50</strong><span>{{ 'hero.stat1' | translate }}</span></li>
+        <li><strong>24/48h</strong><span>{{ 'hero.stat2' | translate }}</span></li>
+        <li><strong>100%</strong><span>{{ 'hero.stat3' | translate }}</span></li>
+      </ul>
+    </div>
+
+    <div class="hero__visual fade-in" aria-hidden="true">
+      <div class="code-window">
+        <div class="code-window__bar">
+          <span></span><span></span><span></span>
+          <em>devdyd.config.js</em>
+        </div>
+        <pre class="code-window__body"><code><span class="tk-kw">const</span> <span class="tk-var">empresa</span> = &#123;
+  web: <span class="tk-str">"a medida"</span>,
+  automatización: <span class="tk-bool">true</span>,
+  soporte: <span class="tk-str">"continuo"</span>,
+  resultado: <span class="tk-fn">crecer</span>()
+&#125;;</code></pre>
+      </div>
+      <div class="float-card float-card--1">
+        <i data-lucide="zap"></i> {{ 'hero.float1' | translate }}
+      </div>
+      <div class="float-card float-card--2">
+        <i data-lucide="shield-check"></i> {{ 'hero.float2' | translate }}
+      </div>
+    </div>
+  </div>
+</section>

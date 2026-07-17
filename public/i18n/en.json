@@ -1,0 +1,88 @@
+{
+  "nav": {
+    "inicio": "Home",
+    "servicios": "Services",
+    "nosotros": "About Us",
+    "contacto": "Contact",
+    "cta": "Get a quote"
+  },
+  "hero": {
+    "badge": "Technology for businesses",
+    "title": "Digitise your business and <span class=\"text-gradient\">save time</span> for what matters",
+    "subtitle": "We build custom websites, automate your processes with AI, and keep your equipment running. All with a single technology partner.",
+    "cta_primary": "Get a quote",
+    "cta_secondary": "See services",
+    "stat1": "projects delivered",
+    "stat2": "response time",
+    "stat3": "custom solutions",
+    "float1": "Automated workflow ✓",
+    "float2": "Equipment secured"
+  },
+  "services": {
+    "tag": "Services",
+    "title": "Everything your business needs to operate digitally",
+    "lead": "Three areas, one goal: technology working for you, not the other way around.",
+    "web_title": "Website development",
+    "web_text": "Corporate and custom websites that load fast, rank on Google, and turn visitors into customers. Design tailored to your brand and every device.",
+    "web_cta": "I want my website",
+    "auto_title": "Automation & AI",
+    "auto_text": "We connect your tools and automate repetitive tasks using n8n-style workflows and artificial intelligence: invoices, emails, CRM, reports… on autopilot.",
+    "auto_cta": "Automate processes",
+    "maint_title": "Equipment maintenance",
+    "maint_text": "Preventive maintenance and technical support for your business computers: fewer breakdowns, more security, and zero surprises.",
+    "maint_cta": "Protect my equipment"
+  },
+  "about": {
+    "tag": "About Us",
+    "title": "Your tech department, without the overhead",
+    "p1": "<strong>DevDyD</strong> was created to bring technology closer to businesses that don't have (and don't need) their own IT department. We speak your language — no jargon — and we're with you from the first idea through day-to-day support.",
+    "p2": "What sets us apart is simple: <strong>closeness</strong> — direct contact with whoever is building your project —, <strong>ongoing technical support</strong> whenever you need it, and <strong>100% custom solutions</strong>, because every business works differently.",
+    "cta": "Tell us about your project",
+    "panel1": "Real closeness",
+    "panel2": "Technical support",
+    "panel3": "Tailored solutions",
+    "panel4": "Results-focused"
+  },
+  "why": {
+    "tag": "Why choose us",
+    "title": "Reasons to work with DevDyD",
+    "speed_title": "Fast delivery",
+    "speed_text": "Clear deadlines from day one and phased deliveries so you see progress from the first week.",
+    "support_title": "Ongoing support",
+    "support_text": "We don't disappear after delivery: maintenance, improvements, and fast response whenever an issue arises.",
+    "price_title": "SME-friendly pricing",
+    "price_text": "Budgets tailored to the reality of small and medium-sized businesses, with no hidden costs.",
+    "exp_title": "Proven experience",
+    "exp_text": "Years building websites, automating processes, and maintaining infrastructure for real businesses."
+  },
+  "contact": {
+    "tag": "Contact",
+    "title": "Message us on WhatsApp",
+    "lead": "Fill in the form and we'll open WhatsApp with your message ready to send.",
+    "nombre_label": "Name *",
+    "nombre_ph": "Your name or company name",
+    "email_label": "Email *",
+    "email_ph": "you@company.com",
+    "msg_label": "Message *",
+    "msg_ph": "Tell us what you need: a website, process automation, maintenance…",
+    "submit": "Send via WhatsApp",
+    "err_nombre": "Name is required (minimum 2 characters).",
+    "err_email": "Please enter a valid email.",
+    "err_msg": "Message must be at least 10 characters.",
+    "info_title": "You can also reach us at",
+    "lbl_email": "Email",
+    "lbl_phone": "Phone",
+    "lbl_location": "Location",
+    "location": "Dos Hermanas, Seville · We work remotely and on-site",
+    "lbl_hours": "Hours",
+    "hours": "Monday to Sunday, 9:00 — 18:00"
+  },
+  "footer": {
+    "tagline": "Friendly technology for businesses that want to grow.",
+    "links": "Links",
+    "legal": "Legal",
+    "aviso_legal": "Legal Notice",
+    "privacidad": "Privacy Policy",
+    "rights": "All rights reserved."
+  }
+}

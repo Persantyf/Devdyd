@@ -1,0 +1,37 @@
+<footer class="footer">
+  <div class="container footer__inner">
+
+    <div class="footer__brand">
+      <a href="#inicio" class="logo logo--light">
+        <span class="logo__mark" aria-hidden="true"><i data-lucide="code-2"></i></span>
+        Dev<span class="logo__accent">DyD</span>
+      </a>
+      <p>{{ 'footer.tagline' | translate }}</p>
+    </div>
+
+    <nav class="footer__links" aria-label="Enlaces rápidos">
+      <h4>{{ 'footer.links' | translate }}</h4>
+      <ul>
+        <li><a href="#inicio">{{ 'nav.inicio' | translate }}</a></li>
+        <li><a href="#servicios">{{ 'nav.servicios' | translate }}</a></li>
+        <li><a href="#nosotros">{{ 'nav.nosotros' | translate }}</a></li>
+        <li><a href="#contacto">{{ 'nav.contacto' | translate }}</a></li>
+      </ul>
+    </nav>
+
+    <nav class="footer__links" aria-label="Legal">
+      <h4>{{ 'footer.legal' | translate }}</h4>
+      <ul>
+        <li><a routerLink="/aviso-legal">{{ 'footer.aviso_legal' | translate }}</a></li>
+        <li><a routerLink="/privacidad">{{ 'footer.privacidad' | translate }}</a></li>
+      </ul>
+    </nav>
+
+  </div>
+
+  <div class="footer__bottom">
+    <div class="container">
+      <p>© {{ currentYear }} DevDyD. {{ 'footer.rights' | translate }}</p>
+    </div>
+  </div>
+</footer>

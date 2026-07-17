@@ -1,0 +1,88 @@
+{
+  "nav": {
+    "inicio": "Inicio",
+    "servicios": "Servicios",
+    "nosotros": "Sobre Nosotros",
+    "contacto": "Contacto",
+    "cta": "Solicitar presupuesto"
+  },
+  "hero": {
+    "badge": "Tecnología para empresas",
+    "title": "Digitaliza tu empresa y <span class=\"text-gradient\">gana tiempo</span> para lo que importa",
+    "subtitle": "Desarrollamos webs a medida, automatizamos tus procesos con IA y mantenemos tus equipos funcionando. Todo con un único socio tecnológico.",
+    "cta_primary": "Solicitar presupuesto",
+    "cta_secondary": "Ver servicios",
+    "stat1": "proyectos entregados",
+    "stat2": "tiempo de respuesta",
+    "stat3": "soluciones a medida",
+    "float1": "Flujo automatizado ✓",
+    "float2": "Equipos protegidos"
+  },
+  "services": {
+    "tag": "Servicios",
+    "title": "Todo lo que tu empresa necesita para funcionar en digital",
+    "lead": "Tres áreas, un mismo objetivo: que la tecnología trabaje para ti y no al revés.",
+    "web_title": "Desarrollo de páginas web",
+    "web_text": "Webs corporativas y a medida que cargan rápido, posicionan en Google y convierten visitas en clientes. Diseño adaptado a tu marca y a cualquier dispositivo.",
+    "web_cta": "Quiero mi web",
+    "auto_title": "Automatizaciones e IA",
+    "auto_text": "Conectamos tus herramientas y automatizamos procesos repetitivos con flujos tipo n8n e inteligencia artificial: facturas, emails, CRM, informes… en piloto automático.",
+    "auto_cta": "Automatizar procesos",
+    "maint_title": "Mantenimiento de equipos",
+    "maint_text": "Mantenimiento preventivo y soporte técnico para los equipos informáticos de tu empresa: menos averías, más seguridad y cero sorpresas.",
+    "maint_cta": "Proteger mis equipos"
+  },
+  "about": {
+    "tag": "Sobre Nosotros",
+    "title": "Tu departamento tecnológico, sin serlo",
+    "p1": "<strong>DevDyD</strong> nace para acercar la tecnología a las empresas que no tienen (ni necesitan) un departamento informático propio. Hablamos tu idioma, no en tecnicismos, y te acompañamos desde la primera idea hasta el soporte del día a día.",
+    "p2": "Lo que nos diferencia es simple: <strong>cercanía</strong> —trato directo con quien desarrolla tu proyecto—, <strong>soporte técnico continuo</strong> cuando lo necesitas y <strong>soluciones 100% a medida</strong>, porque cada negocio funciona de forma distinta.",
+    "cta": "Cuéntanos tu proyecto",
+    "panel1": "Cercanía real",
+    "panel2": "Soporte técnico",
+    "panel3": "Soluciones a medida",
+    "panel4": "Enfoque a resultados"
+  },
+  "why": {
+    "tag": "Por qué elegirnos",
+    "title": "Razones para trabajar con DevDyD",
+    "speed_title": "Rapidez de entrega",
+    "speed_text": "Plazos claros desde el primer día y entregas por fases para que veas avances desde la primera semana.",
+    "support_title": "Soporte continuo",
+    "support_text": "No desaparecemos tras la entrega: mantenimiento, mejoras y respuesta rápida cuando surge un problema.",
+    "price_title": "Precios para pymes",
+    "price_text": "Presupuestos ajustados a la realidad de las pequeñas y medianas empresas, sin costes ocultos.",
+    "exp_title": "Experiencia demostrable",
+    "exp_text": "Años desarrollando webs, automatizando procesos y manteniendo infraestructuras para empresas reales."
+  },
+  "contact": {
+    "tag": "Contacto",
+    "title": "Escríbenos por WhatsApp",
+    "lead": "Rellena el formulario y te abrimos WhatsApp con el mensaje listo para enviar.",
+    "nombre_label": "Nombre *",
+    "nombre_ph": "Tu nombre o el de tu empresa",
+    "email_label": "Email *",
+    "email_ph": "tu@empresa.com",
+    "msg_label": "Mensaje *",
+    "msg_ph": "Cuéntanos qué necesitas: una web, automatizar un proceso, mantenimiento…",
+    "submit": "Enviar por WhatsApp",
+    "err_nombre": "El nombre es obligatorio (mínimo 2 caracteres).",
+    "err_email": "Introduce un email válido.",
+    "err_msg": "El mensaje debe tener al menos 10 caracteres.",
+    "info_title": "También puedes contactarnos en",
+    "lbl_email": "Email",
+    "lbl_phone": "Teléfono",
+    "lbl_location": "Ubicación",
+    "location": "Dos Hermanas, Sevilla · Trabajamos en remoto y presencial",
+    "lbl_hours": "Horario",
+    "hours": "Lunes a Domingo, 9:00 — 18:00"
+  },
+  "footer": {
+    "tagline": "Tecnología cercana para empresas que quieren crecer.",
+    "links": "Enlaces",
+    "legal": "Legal",
+    "aviso_legal": "Aviso Legal",
+    "privacidad": "Política de Privacidad",
+    "rights": "Todos los derechos reservados."
+  }
+}

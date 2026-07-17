@@ -1,0 +1,22 @@
+<section class="section section--alt" id="nosotros">
+  <div class="container about">
+
+    <div class="about__visual fade-in" aria-hidden="true">
+      <div class="about__panel">
+        <div class="about__panel-item"><i data-lucide="handshake"></i><span>{{ 'about.panel1' | translate }}</span></div>
+        <div class="about__panel-item"><i data-lucide="headset"></i><span>{{ 'about.panel2' | translate }}</span></div>
+        <div class="about__panel-item"><i data-lucide="puzzle"></i><span>{{ 'about.panel3' | translate }}</span></div>
+        <div class="about__panel-item"><i data-lucide="trending-up"></i><span>{{ 'about.panel4' | translate }}</span></div>
+      </div>
+    </div>
+
+    <div class="about__content fade-in">
+      <span class="section__tag">{{ 'about.tag' | translate }}</span>
+      <h2 class="section__title">{{ 'about.title' | translate }}</h2>
+      <p [innerHTML]="'about.p1' | translate"></p>
+      <p [innerHTML]="'about.p2' | translate"></p>
+      <a href="#contacto" class="btn btn--primary">{{ 'about.cta' | translate }}</a>
+    </div>
+
+  </div>
+</section>
