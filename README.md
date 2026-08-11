@@ -1,59 +1,68 @@
-# DevdydWeb
+# Devdyd — Web corporativa
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.14.
+Sitio web de **Devdyd**, estudio de desarrollo de software con base en Sevilla: desarrollo web a
+medida, automatización de procesos y mantenimiento técnico.
 
-## Development server
+🔗 **En producción:** [devdyd.vercel.app](https://devdyd.vercel.app)
 
-To start a local development server, run:
+---
 
-```bash
-ng serve
+## Qué incluye
+
+- **Landing de una sola página** con secciones de servicios, sobre nosotros, propuesta de valor y
+  contacto, más navegación por anclas con desplazamiento suave.
+- **Multiidioma** con `@ngx-translate`, cargando las traducciones bajo demanda vía HTTP.
+- **Formulario de contacto** conectado con EmailJS, sin backend propio que mantener.
+- **Banner de cookies** y páginas de aviso legal y política de privacidad conforme a RGPD y LOPDGDD.
+- **Botón flotante de WhatsApp** para contacto directo desde móvil.
+- **Fondo animado** por componente (`bg-lines`), sin librerías externas.
+- **Datos estructurados** JSON-LD de tipo `LocalBusiness` para posicionamiento en buscadores.
+
+## Stack
+
+| Área | Tecnología |
+|---|---|
+| Framework | Angular 21 (componentes *standalone*, `app.config.ts`) |
+| Enrutado | Angular Router con rutas de legal y *fallback* comodín |
+| Estilos | SCSS |
+| i18n | `@ngx-translate/core` + `@ngx-translate/http-loader` |
+| Formularios | Angular Forms + `@emailjs/browser` |
+| Reactividad | RxJS |
+| Tests | Vitest |
+| Formato | Prettier + EditorConfig |
+| CI/CD | GitHub Actions → Cloudflare Pages (`wrangler-action`) |
+
+## Arquitectura
+
+```
+src/app/
+├── app.config.ts          Configuración raíz (providers standalone)
+├── app.routes.ts          Rutas: home, aviso legal, privacidad, wildcard
+├── components/            Bloques de la landing
+│   ├── header/  hero/  services/  about/  why-us/  contact/  footer/
+│   ├── bg-lines/          Fondo animado
+│   ├── cookie-banner/     Consentimiento RGPD
+│   └── whatsapp-fab/      Botón flotante de contacto
+├── pages/                 Vistas enrutadas
+└── services/
+    └── scroll.service.ts  Desplazamiento suave entre secciones
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Puesta en marcha
 
 ```bash
-ng generate component component-name
+npm install
+npm start          # servidor de desarrollo en http://localhost:4200
+npm run build      # build de producción en dist/devdyd-web/browser
+npm test           # tests unitarios con Vitest
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Despliegue
 
-```bash
-ng generate --help
-```
+Cada `push` a `main` dispara el workflow de GitHub Actions: instala dependencias, compila el proyecto
+y publica en Cloudflare Pages. Las credenciales (`CLOUDFLARE_API_TOKEN` y `CLOUDFLARE_ACCOUNT_ID`)
+viven como *secrets* del repositorio y nunca se versionan.
 
-## Building
+---
 
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Desarrollado por [Daniel Cano Domínguez](https://github.com/Persantyf).
